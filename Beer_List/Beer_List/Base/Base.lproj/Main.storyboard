@@ -3,6 +3,7 @@
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -15,42 +16,333 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="aPh-FF-fh5">
+                                <rect key="frame" x="0.0" y="114" width="375" height="504"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="161" id="eJW-Ui-TON">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="161"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="eJW-Ui-TON" id="56J-Q5-6Vd">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="161"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lQt-hG-Obt">
+                                                    <rect key="frame" x="15" y="6" width="101" height="149"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="XX" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NvG-wa-Jj7">
+                                                    <rect key="frame" x="124" y="11" width="235" height="18"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="235" id="ZyG-aL-yso"/>
+                                                        <constraint firstAttribute="height" constant="18" id="eQ3-0s-Afc"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <color key="textColor" systemColor="systemOrangeColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="맥주이름" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sad-3z-oHe">
+                                                    <rect key="frame" x="124" y="37" width="235" height="20.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="235" id="kta-Zs-jX6"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QAz-kc-6kd">
+                                                    <rect key="frame" x="124" y="66.5" width="251" height="88.5"/>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="251" id="rMr-8Y-1Y1"/>
+                                                    </constraints>
+                                                    <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                                    <color key="textColor" systemColor="systemGray2Color"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                </textView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="NvG-wa-Jj7" firstAttribute="leading" secondItem="lQt-hG-Obt" secondAttribute="trailing" constant="8" id="9K4-Xt-S0n"/>
+                                                <constraint firstAttribute="bottom" secondItem="lQt-hG-Obt" secondAttribute="bottom" constant="6" id="9et-Mr-Cn3"/>
+                                                <constraint firstItem="Sad-3z-oHe" firstAttribute="leading" secondItem="lQt-hG-Obt" secondAttribute="trailing" constant="8" id="BaP-m4-vK0"/>
+                                                <constraint firstItem="Sad-3z-oHe" firstAttribute="top" secondItem="NvG-wa-Jj7" secondAttribute="bottom" constant="8" id="KEG-f4-suz"/>
+                                                <constraint firstItem="QAz-kc-6kd" firstAttribute="top" secondItem="Sad-3z-oHe" secondAttribute="bottom" constant="9" id="RDp-AC-HM9"/>
+                                                <constraint firstItem="Sad-3z-oHe" firstAttribute="trailing" secondItem="56J-Q5-6Vd" secondAttribute="trailingMargin" id="gKH-ng-zcS"/>
+                                                <constraint firstItem="QAz-kc-6kd" firstAttribute="leading" secondItem="lQt-hG-Obt" secondAttribute="trailing" constant="8" id="jE5-fe-pqH"/>
+                                                <constraint firstItem="NvG-wa-Jj7" firstAttribute="trailing" secondItem="56J-Q5-6Vd" secondAttribute="trailingMargin" id="nHc-37-4zn"/>
+                                                <constraint firstAttribute="trailing" secondItem="QAz-kc-6kd" secondAttribute="trailing" id="nkT-MP-f7Y"/>
+                                                <constraint firstItem="lQt-hG-Obt" firstAttribute="top" secondItem="56J-Q5-6Vd" secondAttribute="top" constant="6" id="u12-7q-V6u"/>
+                                                <constraint firstItem="QAz-kc-6kd" firstAttribute="bottom" secondItem="lQt-hG-Obt" secondAttribute="bottom" id="vUQ-3f-U4h"/>
+                                                <constraint firstItem="lQt-hG-Obt" firstAttribute="leading" secondItem="56J-Q5-6Vd" secondAttribute="leading" constant="15" id="wPK-xx-RX3"/>
+                                                <constraint firstItem="NvG-wa-Jj7" firstAttribute="top" secondItem="56J-Q5-6Vd" secondAttribute="topMargin" id="zKL-6w-qUz"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="맥주리스트" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="79F-dh-gbX">
+                                <rect key="frame" x="15" y="70" width="130" height="36"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="aPh-FF-fh5" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Lti-t6-mTu"/>
+                            <constraint firstItem="79F-dh-gbX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="PTG-m0-I4W"/>
+                            <constraint firstItem="aPh-FF-fh5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="XmM-lx-fht"/>
+                            <constraint firstItem="aPh-FF-fh5" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="ZWv-MR-QqM"/>
+                            <constraint firstItem="aPh-FF-fh5" firstAttribute="top" secondItem="79F-dh-gbX" secondAttribute="bottom" constant="8" id="ZrU-4Q-gyn"/>
+                            <constraint firstItem="79F-dh-gbX" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="70" id="orp-kT-bP3"/>
+                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="맥주리스트" id="KC3-Z7-q77"/>
+                    <tabBarItem key="tabBarItem" title="맥주리스트" image="list.dash" catalog="system" id="KC3-Z7-q77"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1060" y="118.29085457271366"/>
         </scene>
-        <!--Item-->
+        <!--ID 검색-->
         <scene sceneID="7hj-a4-Otk">
             <objects>
-                <viewController id="yWg-fm-i91" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SearchViewController" id="yWg-fm-i91" customClass="SearchViewController" customModule="Beer_List" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9as-Jr-Puq">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ID 검색" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jun-Eu-D4h">
+                                <rect key="frame" x="15" y="70" width="88" height="36"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="PvV-r8-HWB">
+                                <rect key="frame" x="0.0" y="114" width="375" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qe8-PU-8Yv">
+                                <rect key="frame" x="87.5" y="190" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="b3W-nE-nVA"/>
+                                    <constraint firstAttribute="height" constant="200" id="rst-M9-LhN"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="XX" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="23X-4d-bXE">
+                                <rect key="frame" x="102" y="410" width="171" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="9AG-KD-5iH"/>
+                                    <constraint firstAttribute="width" constant="171" id="amK-Dt-T5b"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" systemColor="systemOrangeColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qei-mR-DTQ">
+                                <rect key="frame" x="16" y="451" width="343" height="132"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" systemColor="systemGray2Color"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="2mz-A0-7Cj"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="23X-4d-bXE" firstAttribute="centerX" secondItem="2mz-A0-7Cj" secondAttribute="centerX" id="67v-bJ-DLC"/>
+                            <constraint firstItem="PvV-r8-HWB" firstAttribute="trailing" secondItem="2mz-A0-7Cj" secondAttribute="trailing" id="BBd-FE-rDe"/>
+                            <constraint firstItem="qei-mR-DTQ" firstAttribute="top" secondItem="23X-4d-bXE" secondAttribute="bottom" constant="20" id="EBu-mr-goL"/>
+                            <constraint firstItem="PvV-r8-HWB" firstAttribute="top" secondItem="Jun-Eu-D4h" secondAttribute="bottom" constant="8" id="GMl-Ti-HWf"/>
+                            <constraint firstItem="qe8-PU-8Yv" firstAttribute="centerX" secondItem="2mz-A0-7Cj" secondAttribute="centerX" id="Gh8-Xr-oYI"/>
+                            <constraint firstItem="PvV-r8-HWB" firstAttribute="leading" secondItem="2mz-A0-7Cj" secondAttribute="leading" id="JZh-eu-4iw"/>
+                            <constraint firstItem="2mz-A0-7Cj" firstAttribute="bottom" secondItem="qei-mR-DTQ" secondAttribute="bottom" constant="35" id="NgH-D7-tqb"/>
+                            <constraint firstItem="PvV-r8-HWB" firstAttribute="top" secondItem="Jun-Eu-D4h" secondAttribute="bottom" constant="8" id="TEU-eg-InX"/>
+                            <constraint firstItem="23X-4d-bXE" firstAttribute="top" secondItem="qe8-PU-8Yv" secondAttribute="bottom" constant="20" id="Vgw-Nq-qGe"/>
+                            <constraint firstItem="2mz-A0-7Cj" firstAttribute="trailing" secondItem="qei-mR-DTQ" secondAttribute="trailing" constant="16" id="aQD-Yy-QMW"/>
+                            <constraint firstItem="PvV-r8-HWB" firstAttribute="leading" secondItem="2mz-A0-7Cj" secondAttribute="leading" id="coP-Mt-Kj9"/>
+                            <constraint firstItem="Jun-Eu-D4h" firstAttribute="leading" secondItem="2mz-A0-7Cj" secondAttribute="leading" constant="15" id="gHg-nF-v8n"/>
+                            <constraint firstItem="qe8-PU-8Yv" firstAttribute="top" secondItem="PvV-r8-HWB" secondAttribute="bottom" constant="20" id="iVz-Om-9C3" customClass="NSLayoutHelper" customModule="LayoutHelper"/>
+                            <constraint firstItem="Jun-Eu-D4h" firstAttribute="top" secondItem="2mz-A0-7Cj" secondAttribute="top" constant="70" id="p7w-jt-yb9"/>
+                            <constraint firstItem="PvV-r8-HWB" firstAttribute="trailing" secondItem="2mz-A0-7Cj" secondAttribute="trailing" id="sxe-mx-8Hj"/>
+                            <constraint firstItem="qei-mR-DTQ" firstAttribute="leading" secondItem="2mz-A0-7Cj" secondAttribute="leading" constant="16" id="t04-tO-Wx8"/>
+                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="xGI-ch-aHF"/>
+                    <tabBarItem key="tabBarItem" title="ID 검색" image="magnifyingglass" catalog="system" id="xGI-ch-aHF"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bxc-hQ-710" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1847" y="117"/>
+            <point key="canvasLocation" x="1845.5999999999999" y="116.49175412293854"/>
         </scene>
-        <!--Item-->
+        <!--아무거나 검색-->
         <scene sceneID="RE8-xo-jN8">
             <objects>
-                <viewController id="nTS-v7-myU" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RandomViewController" id="nTS-v7-myU" customClass="RandomViewController" customModule="Beer_List" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bwb-O1-ZrW">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="아무거나 검색" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dmt-3Q-8AJ">
+                                <rect key="frame" x="135.5" y="32" width="104" height="23"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="23" id="1lY-84-lO1"/>
+                                    <constraint firstAttribute="width" constant="104" id="8ta-tg-AiK"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="19"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="XX" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="whD-xe-fkA">
+                                <rect key="frame" x="102" y="320" width="171" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="171" id="QzU-ZH-Hfa"/>
+                                    <constraint firstAttribute="height" constant="21" id="i6x-9g-txE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" systemColor="systemOrangeColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JdR-eS-Asw">
+                                <rect key="frame" x="87.5" y="100" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="JJF-ss-mfC"/>
+                                    <constraint firstAttribute="width" constant="200" id="zUe-aI-vxG"/>
+                                </constraints>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W1o-8w-HhE">
+                                <rect key="frame" x="16" y="361" width="343" height="160"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" systemColor="systemGray2Color"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iq4-WG-WWS">
+                                <rect key="frame" x="20" y="541" width="335" height="50"/>
+                                <color key="backgroundColor" name="AccentColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="qsP-zD-xJb"/>
+                                </constraints>
+                                <color key="tintColor" red="0.97255545850000003" green="0.97253733870000003" blue="0.97254973649999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="I'm Feeling Lucky"/>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="hpl-fO-xhA"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Iq4-WG-WWS" firstAttribute="leading" secondItem="hpl-fO-xhA" secondAttribute="leading" constant="20" id="3AB-kP-On1"/>
+                            <constraint firstItem="hpl-fO-xhA" firstAttribute="trailing" secondItem="W1o-8w-HhE" secondAttribute="trailing" constant="16" id="5qf-fi-1Dc"/>
+                            <constraint firstItem="dmt-3Q-8AJ" firstAttribute="centerX" secondItem="hpl-fO-xhA" secondAttribute="centerX" id="7Ih-jw-L26"/>
+                            <constraint firstItem="W1o-8w-HhE" firstAttribute="leading" secondItem="hpl-fO-xhA" secondAttribute="leading" constant="16" id="IeL-50-4gy"/>
+                            <constraint firstItem="whD-xe-fkA" firstAttribute="top" secondItem="JdR-eS-Asw" secondAttribute="bottom" constant="20" id="JJ0-8N-pls" customClass="NSLayoutHelper" customModule="LayoutHelper">
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="iPhoneSE">
+                                        <real key="value" value="18"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="iPhoneSE2G">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="iPhone8Plus">
+                                        <real key="value" value="22"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="iPhone11Pro">
+                                        <real key="value" value="22"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="iPhone11">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="iPhone11Max">
+                                        <real key="value" value="22"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="iPhone12Mini">
+                                        <real key="value" value="18"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="iPhone12">
+                                        <real key="value" value="22"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="iPhone12ProMax">
+                                        <real key="value" value="24"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </constraint>
+                            <constraint firstItem="dmt-3Q-8AJ" firstAttribute="top" secondItem="hpl-fO-xhA" secondAttribute="top" constant="32" id="RaJ-bS-1GN"/>
+                            <constraint firstItem="whD-xe-fkA" firstAttribute="centerX" secondItem="hpl-fO-xhA" secondAttribute="centerX" id="dOy-fD-mmm"/>
+                            <constraint firstItem="Iq4-WG-WWS" firstAttribute="top" secondItem="whD-xe-fkA" secondAttribute="bottom" constant="200" id="e9X-0x-jhb" customClass="NSLayoutHelper" customModule="LayoutHelper">
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="iPhoneSE">
+                                        <real key="value" value="180"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="iPhoneSE2G">
+                                        <real key="value" value="200"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="iPhone8Plus">
+                                        <real key="value" value="220"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="iPhone11Pro">
+                                        <real key="value" value="200"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="iPhone11">
+                                        <real key="value" value="220"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="iPhone11Max">
+                                        <real key="value" value="240"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="iPhone12Mini">
+                                        <real key="value" value="180"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="iPhone12">
+                                        <real key="value" value="220"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="iPhone12ProMax">
+                                        <real key="value" value="240"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </constraint>
+                            <constraint firstItem="JdR-eS-Asw" firstAttribute="top" secondItem="dmt-3Q-8AJ" secondAttribute="bottom" constant="45" id="jFw-Dm-R7v" customClass="NSLayoutHelper" customModule="LayoutHelper">
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="iPhoneSE2G">
+                                        <real key="value" value="45"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="iPhoneSE">
+                                        <real key="value" value="40"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="iPhone8Plus">
+                                        <real key="value" value="50"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="iPhone11Pro">
+                                        <real key="value" value="50"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="iPhone11">
+                                        <real key="value" value="55"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="iPhone11Max">
+                                        <real key="value" value="60"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="iPhone12Mini">
+                                        <real key="value" value="40"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="iPhone12">
+                                        <real key="value" value="55"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="iPhone12ProMax">
+                                        <real key="value" value="60"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </constraint>
+                            <constraint firstItem="W1o-8w-HhE" firstAttribute="top" secondItem="whD-xe-fkA" secondAttribute="bottom" constant="20" id="jiH-xV-aRy"/>
+                            <constraint firstItem="Iq4-WG-WWS" firstAttribute="top" secondItem="W1o-8w-HhE" secondAttribute="bottom" constant="20" id="oID-QT-Yt9"/>
+                            <constraint firstItem="hpl-fO-xhA" firstAttribute="trailing" secondItem="Iq4-WG-WWS" secondAttribute="trailing" constant="20" id="pOB-ag-mZH"/>
+                            <constraint firstItem="JdR-eS-Asw" firstAttribute="centerX" secondItem="hpl-fO-xhA" secondAttribute="centerX" id="qDb-g2-Fby"/>
+                            <constraint firstItem="Iq4-WG-WWS" firstAttribute="centerX" secondItem="hpl-fO-xhA" secondAttribute="centerX" id="zbf-8N-T1O"/>
+                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="PrZ-DA-XVc"/>
+                    <tabBarItem key="tabBarItem" title="아무거나 검색" image="questionmark.diamond" catalog="system" id="PrZ-DA-XVc"/>
+                    <connections>
+                        <outlet property="beerInfoTextView" destination="W1o-8w-HhE" id="zlX-GK-krq"/>
+                        <outlet property="randomButton" destination="Iq4-WG-WWS" id="XmC-WE-lTR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wt6-84-wSE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -77,8 +369,20 @@
         </scene>
     </scenes>
     <resources>
+        <image name="list.dash" catalog="system" width="128" height="85"/>
+        <image name="magnifyingglass" catalog="system" width="128" height="115"/>
+        <image name="questionmark.diamond" catalog="system" width="128" height="122"/>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
