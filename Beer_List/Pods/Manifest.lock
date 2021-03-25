@@ -1,6 +1,7 @@
 PODS:
   - Alamofire (5.4.1)
   - Kingfisher (6.2.1)
+  - LayoutHelper (1.0.0)
   - RxCocoa (6.1.0):
     - RxRelay (= 6.1.0)
     - RxSwift (= 6.1.0)
@@ -11,6 +12,7 @@ PODS:
 DEPENDENCIES:
   - Alamofire
   - Kingfisher
+  - LayoutHelper
   - RxCocoa
   - RxSwift
 
@@ -18,6 +20,7 @@ SPEC REPOS:
   trunk:
     - Alamofire
     - Kingfisher
+    - LayoutHelper
     - RxCocoa
     - RxRelay
     - RxSwift
@@ -25,10 +28,11 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   Alamofire: 2291f7d21ca607c491dd17642e5d40fdcda0e65c
   Kingfisher: e71c6fac2aebb1262888cabc2cb13d313362a48f
+  LayoutHelper: fd809f52e0ae583f7576bf5d2af8248b5c3ec4d0
   RxCocoa: 5c51f02d562cbd94629f6c26cf0c80fe4ab8d343
   RxRelay: 483e1a19fad961b41f0b0c0bee506f46c1ae14fe
   RxSwift: a834e5c538e89eca0cae86f403f4fbf0336786ce
 
-PODFILE CHECKSUM: 03beb3e578a79b4623c16fdb37cc57beebac824b
+PODFILE CHECKSUM: 574b0c65c1945b3b3a37cc5ed40cd80f8977c294
 
 COCOAPODS: 1.10.1
