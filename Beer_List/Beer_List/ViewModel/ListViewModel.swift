@@ -26,8 +26,9 @@ class ListViewModel {
                         do {
                             
                             let jsonData = (try? JSONSerialization.data(withJSONObject: json, options: .fragmentsAllowed)) ?? Data()
-                            let listData = try decoder.decode(BeerListModel.self, from: jsonData)
-                            print(listData)
+                            let listData = try decoder.decode(Array<BeerListModel>.self, from: jsonData)
+//                            print(listData)
+                            
                             
                             
                         } catch {
@@ -39,19 +40,5 @@ class ListViewModel {
                 }
             ).disposed(by: disposeBag)
         
-//        AF.request(mainUrl, method: .get).responseData { response in
-//
-//            switch response.result {
-//            case .success(let res):
-//                if let nsDic = res as? NSDictionary {
-//                    for (key, value) in nsDic {
-//                        print("key: \(key), value: \(value)")
-//                    }
-//                }
-//
-//            case .failure(let err):
-//                print(err.localizedDescription)
-//            }
-//        }
     }
 }
