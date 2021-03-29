@@ -11,28 +11,28 @@ import Foundation
 
 struct BeerListModel: Codable {
     
-    var id: Int?
-    var name: String?
-    var tagline: String?
-    var first_brewed: String?
-    var description: String?
-    var image_url: String?
-    var abv: Double?
-    var ibu: Double?
-    var target_fg: Double?
-    var target_og: Double?
-    var ebc: Double?
-    var srm: Double?
-    var ph: Double?
-    var attenuation_level: Double?
-    var volume: Volume?
-    var boil_volume: Boil_Volume?
-    var method: Method?
-    var fermentation: Fermentation?
-    var ingredients: Ingredients?
-    var food_pairing: Array<String>?
-    var brewers_tips: String?
-    var contributed_by: String?
+    var id: Int
+    var name: String
+//    var tagline: String?
+//    var first_brewed: String?
+    var description: String
+    var image_url: String
+//    var abv: Double?
+//    var ibu: Double?
+//    var target_fg: Double?
+//    var target_og: Double?
+//    var ebc: Double?
+//    var srm: Double?
+//    var ph: Double?
+//    var attenuation_level: Double?
+//    var volume: Volume?
+//    var boil_volume: Boil_Volume?
+//    var method: Method?
+//    var fermentation: Fermentation?
+//    var ingredients: Ingredients?
+//    var food_pairing: Array<String>?
+//    var brewers_tips: String?
+//    var contributed_by: String?
 
 }
 
