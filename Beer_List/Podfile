@@ -12,5 +12,6 @@ pod 'RxCocoa'
 pod 'Alamofire'
 pod 'Kingfisher'
 pod 'LayoutHelper'
+pod 'RxAlamofire'
 
 end

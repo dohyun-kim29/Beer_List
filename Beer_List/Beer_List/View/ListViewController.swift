@@ -8,10 +8,13 @@
 import UIKit
 
 class ListViewController: UIViewController {
+    
+    let viewModel = ListViewModel()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        viewModel.ListRequest()        
     }
 
 

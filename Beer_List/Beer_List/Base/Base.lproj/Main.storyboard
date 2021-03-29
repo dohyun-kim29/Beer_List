@@ -341,7 +341,9 @@
                     <tabBarItem key="tabBarItem" title="아무거나 검색" image="questionmark.diamond" catalog="system" id="PrZ-DA-XVc"/>
                     <connections>
                         <outlet property="beerInfoTextView" destination="W1o-8w-HhE" id="zlX-GK-krq"/>
+                        <outlet property="beerNumberTextView" destination="whD-xe-fkA" id="PXV-em-fwo"/>
                         <outlet property="randomButton" destination="Iq4-WG-WWS" id="XmC-WE-lTR"/>
+                        <outlet property="randomImageView" destination="JdR-eS-Asw" id="vAO-8i-8Xf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wt6-84-wSE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -354,6 +356,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="AVr-pw-Y5h" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="UsZ-QK-Mrp">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
