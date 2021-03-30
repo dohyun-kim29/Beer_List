@@ -12,7 +12,7 @@ import RxCocoa
 import Alamofire
 import RxAlamofire
 
-class SearchViewModel: ViewModelType {
+final class SearchViewModel: ViewModelType {
     
     struct Input {
         let idTextDriver: Driver<String>

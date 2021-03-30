@@ -30,7 +30,7 @@ extension BeerAPI {
         case .List:
             return ""
         case .Search:
-            return "\(id)"
+            return "/\(id)"
         case .Random:
             return "/random"
             }

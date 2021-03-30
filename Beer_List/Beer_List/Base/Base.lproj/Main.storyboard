@@ -143,7 +143,7 @@
                                     <constraint firstAttribute="height" constant="200" id="rst-M9-LhN"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="XX" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="23X-4d-bXE">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="23X-4d-bXE">
                                 <rect key="frame" x="102" y="410" width="171" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="9AG-KD-5iH"/>
@@ -156,12 +156,11 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qei-mR-DTQ">
                                 <rect key="frame" x="16" y="468" width="343" height="115"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <color key="textColor" systemColor="systemGray2Color"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="이름" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LLn-T3-o9E">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LLn-T3-o9E">
                                 <rect key="frame" x="0.0" y="439" width="375" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="4eX-vW-jo5"/>
@@ -196,6 +195,13 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="ID 검색" image="magnifyingglass" catalog="system" id="xGI-ch-aHF"/>
+                    <connections>
+                        <outlet property="beerDescriptionTextView" destination="qei-mR-DTQ" id="FKH-lA-dPH"/>
+                        <outlet property="beerImageView" destination="qe8-PU-8Yv" id="GRa-rb-kfg"/>
+                        <outlet property="beerNameTextField" destination="LLn-T3-o9E" id="rOR-Sa-wS2"/>
+                        <outlet property="beerNumberTextField" destination="23X-4d-bXE" id="BFY-eQ-3gj"/>
+                        <outlet property="beerSearchBar" destination="PvV-r8-HWB" id="8i3-UT-uam"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bxc-hQ-710" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
