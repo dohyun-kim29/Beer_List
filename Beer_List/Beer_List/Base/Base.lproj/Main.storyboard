@@ -212,7 +212,7 @@
                                 </constraints>
                             </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W1o-8w-HhE">
-                                <rect key="frame" x="16" y="361" width="343" height="160"/>
+                                <rect key="frame" x="16" y="380" width="343" height="141"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <color key="textColor" systemColor="systemGray2Color"/>
@@ -228,6 +228,15 @@
                                 <color key="tintColor" red="0.97255545850000003" green="0.97253733870000003" blue="0.97254973649999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="I'm Feeling Lucky"/>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="제목" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SBP-Vc-R4x">
+                                <rect key="frame" x="171" y="349" width="33" height="23"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="23" id="5mz-2X-6TR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="19"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="hpl-fO-xhA"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -235,6 +244,8 @@
                             <constraint firstItem="Iq4-WG-WWS" firstAttribute="leading" secondItem="hpl-fO-xhA" secondAttribute="leading" constant="20" id="3AB-kP-On1"/>
                             <constraint firstItem="hpl-fO-xhA" firstAttribute="trailing" secondItem="W1o-8w-HhE" secondAttribute="trailing" constant="16" id="5qf-fi-1Dc"/>
                             <constraint firstItem="dmt-3Q-8AJ" firstAttribute="centerX" secondItem="hpl-fO-xhA" secondAttribute="centerX" id="7Ih-jw-L26"/>
+                            <constraint firstItem="SBP-Vc-R4x" firstAttribute="top" secondItem="whD-xe-fkA" secondAttribute="bottom" constant="8" id="Cef-Rh-3JM"/>
+                            <constraint firstItem="W1o-8w-HhE" firstAttribute="top" secondItem="SBP-Vc-R4x" secondAttribute="bottom" constant="8" id="Fj9-Pa-XgH"/>
                             <constraint firstItem="W1o-8w-HhE" firstAttribute="leading" secondItem="hpl-fO-xhA" secondAttribute="leading" constant="16" id="IeL-50-4gy"/>
                             <constraint firstItem="whD-xe-fkA" firstAttribute="top" secondItem="JdR-eS-Asw" secondAttribute="bottom" constant="20" id="JJ0-8N-pls" customClass="NSLayoutHelper" customModule="LayoutHelper">
                                 <userDefinedRuntimeAttributes>
@@ -268,6 +279,7 @@
                                 </userDefinedRuntimeAttributes>
                             </constraint>
                             <constraint firstItem="dmt-3Q-8AJ" firstAttribute="top" secondItem="hpl-fO-xhA" secondAttribute="top" constant="32" id="RaJ-bS-1GN"/>
+                            <constraint firstItem="SBP-Vc-R4x" firstAttribute="centerX" secondItem="hpl-fO-xhA" secondAttribute="centerX" id="YFD-lp-AfJ"/>
                             <constraint firstItem="whD-xe-fkA" firstAttribute="centerX" secondItem="hpl-fO-xhA" secondAttribute="centerX" id="dOy-fD-mmm"/>
                             <constraint firstItem="Iq4-WG-WWS" firstAttribute="top" secondItem="whD-xe-fkA" secondAttribute="bottom" constant="200" id="e9X-0x-jhb" customClass="NSLayoutHelper" customModule="LayoutHelper">
                                 <userDefinedRuntimeAttributes>
@@ -331,7 +343,6 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </constraint>
-                            <constraint firstItem="W1o-8w-HhE" firstAttribute="top" secondItem="whD-xe-fkA" secondAttribute="bottom" constant="20" id="jiH-xV-aRy"/>
                             <constraint firstItem="Iq4-WG-WWS" firstAttribute="top" secondItem="W1o-8w-HhE" secondAttribute="bottom" constant="20" id="oID-QT-Yt9"/>
                             <constraint firstItem="hpl-fO-xhA" firstAttribute="trailing" secondItem="Iq4-WG-WWS" secondAttribute="trailing" constant="20" id="pOB-ag-mZH"/>
                             <constraint firstItem="JdR-eS-Asw" firstAttribute="centerX" secondItem="hpl-fO-xhA" secondAttribute="centerX" id="qDb-g2-Fby"/>
@@ -341,7 +352,8 @@
                     <tabBarItem key="tabBarItem" title="아무거나 검색" image="questionmark.diamond" catalog="system" id="PrZ-DA-XVc"/>
                     <connections>
                         <outlet property="beerInfoTextView" destination="W1o-8w-HhE" id="zlX-GK-krq"/>
-                        <outlet property="beerNumberTextView" destination="whD-xe-fkA" id="PXV-em-fwo"/>
+                        <outlet property="beerNameTextField" destination="SBP-Vc-R4x" id="ecn-2G-WuM"/>
+                        <outlet property="beerNumberTextField" destination="whD-xe-fkA" id="PXV-em-fwo"/>
                         <outlet property="randomButton" destination="Iq4-WG-WWS" id="XmC-WE-lTR"/>
                         <outlet property="randomImageView" destination="JdR-eS-Asw" id="vAO-8i-8Xf"/>
                     </connections>

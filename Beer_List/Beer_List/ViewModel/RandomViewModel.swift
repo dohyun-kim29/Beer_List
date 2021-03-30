@@ -11,32 +11,22 @@ import RxCocoa
 import Alamofire
 import RxAlamofire
 
-class RandomViewModel {
-    let disposeBag = DisposeBag()
+//class RandomViewModel: ViewModelTyoe {
     
-    func randomRequest() {
-        
-        requestJSON(.get, "\(mainUrl)/random")
-            .subscribe(
-                onNext: { res, json in
-//                    switch res.statusCode {
-//                    case 200:
-//                            print(json)
-                        do {
-                            let jsonData = (try? JSONSerialization.data(withJSONObject: json, options: .fragmentsAllowed)) ?? Data()
-                            let listData = try decoder.decode(Array<BeerListModel>.self, from: jsonData)
-                            print(listData[0])
-                            RandomViewController().randomData = listData[0]
-                        } catch {
-//                            print(error)
-//                        }
-//                    default :
-//                        print("err")
-                    }
-                }
-            ).disposed(by: disposeBag)
-//        return Observable.of(randomBeerInfo ?? BeerListModel.init(id: 0, name: "", description: "", image_url: ""))
-        
-    }
+//    struct Input {
+//        let refreshButtonDriver: Driver<Void>
+//    }
+//
+//    struct Output {
+//        let result: Observable<[BeerListModel]>
+//    }
+//
+//    func transform(_ input: Input) -> Output {
+//        let randomData = input.refreshButtonDriver.asObservable()
+//
+//    }
+//
+//    
     
-}
+    
+//}
