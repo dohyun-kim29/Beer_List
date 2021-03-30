@@ -22,7 +22,7 @@ extension BeerAPI {
     }
     
     var id: String {
-        return UserDefaults.standard.string(forKey: "id") ?? "0"
+        return UserDefaults.standard.string(forKey: "id") ?? "1"
     }
     
     var path: String {
