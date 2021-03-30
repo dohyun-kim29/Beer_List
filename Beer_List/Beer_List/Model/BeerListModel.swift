@@ -11,12 +11,12 @@ import Foundation
 
 struct BeerListModel: Codable {
     
-    var id: Int
-    var name: String
+    var id: Int?
+    var name: String?
 //    var tagline: String?
 //    var first_brewed: String?
-    var description: String
-    var image_url: String
+    var description: String?
+    var image_url: String?
 //    var abv: Double?
 //    var ibu: Double?
 //    var target_fg: Double?
