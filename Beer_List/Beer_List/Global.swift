@@ -6,7 +6,8 @@
 //
 
 import Foundation
+import RxSwift
 
 let mainUrl = "https://api.punkapi.com/v2/beers"
 let decoder = JSONDecoder()
-
+let disposeBag = DisposeBag()
