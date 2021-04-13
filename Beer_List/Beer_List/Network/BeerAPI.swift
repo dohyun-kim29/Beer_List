@@ -25,6 +25,8 @@ extension BeerAPI {
         return UserDefaults.standard.string(forKey: "id") ?? "1"
     }
     
+    //SMS 참고하면서 네트워킹 코드를 짰는데 ud를 쓸 이유가 없는데 왜 다른 방법이 생각이 안나지...
+    
     var path: String {
         switch self {
         case .List:

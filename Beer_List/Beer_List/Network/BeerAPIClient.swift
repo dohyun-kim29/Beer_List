@@ -23,7 +23,7 @@ class BeerAPIClient {
                         case 200:
                             do {
                                 let jsonData = (try? JSONSerialization.data(withJSONObject: json, options: .fragmentsAllowed)) ?? Data()
-                                let listData: T = try decoder.decode(T.self, from: jsonData)
+                                let listData: T = try JSONDecoder().decode(T.self, from: jsonData)
                                 return obs.onNext(listData)
                             } catch(let err) {
                                 return obs.onError(err)
